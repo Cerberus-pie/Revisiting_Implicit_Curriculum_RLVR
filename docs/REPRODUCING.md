@@ -13,7 +13,7 @@ python -m src.figures --output reproduced/figures
 
 Verification checks file hashes, the complete CSV inventory, and evaluation, gradient, and perturbation grids. The analysis produces:
 
-- `summary.json`: all final outcomes, success criteria, early internal measurements, and gradient peaks.
+- `summary.json`: all final outcomes, the near-perfect-accuracy threshold, early internal measurements, and gradient peaks.
 - `coupling.json`: all phase-wise local-response counts and the Figure 4 example.
 - `plateau.json`: prompt polarization, stabilized aggregate metrics, and gradient decay in the L15 plateau.
 

@@ -72,7 +72,7 @@ def main():
                         assert math.isfinite(float(row[field])), (name, field)
     print(json.dumps({"status": "passed", "files": len(manifest["files"]),
                       "measurement_tables": len(actual), "measurement_rows": count,
-                      "report_version": 20}, indent=2))
+                      "report_version": manifest["version"]}, indent=2))
 
 
 if __name__ == "__main__":

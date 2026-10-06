@@ -1,8 +1,7 @@
 {
   "title": "Revisiting Implicit Curriculum in RLVR",
-  "version": 20,
+  "version": 21,
   "package_checks": {
-    "report_bytes_unchanged": true,
     "figures_rebuilt_and_pixel_matched": 8,
     "mathematical_tests_passed": 8,
     "frozen_head_weight_tensors_identical": true,
@@ -10,7 +9,9 @@
     "local_perturbation_smoke_check": "passed",
     "measurement_tables": 21,
     "measurement_rows": 132839,
-    "scope": "Offline package verification and small implementation checks; the full experiments were not retrained for packaging."
+    "scope": "Offline package verification and small implementation checks; the full experiments were not retrained for packaging.",
+    "report_bytes_match_source": true,
+    "report_revision": "Hard-task bootstrapping is the main outcome; near-perfect terminal accuracy is an endpoint criterion."
   },
   "files": [
     {
@@ -25,8 +26,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4092,
-      "sha256": "bad5ddb86382afea4eac359a34ab068cfcae4eb9f8709c52a4038b59e717de1c"
+      "bytes": 4469,
+      "sha256": "82c17219a3f162e8ddb806671cc943b9723acc678317d5e5a5eab96d92218bf5"
     },
     {
       "path": "configs/fixed45_seed101.json",
@@ -76,17 +77,17 @@
     {
       "path": "data/provenance.json",
       "bytes": 22714,
-      "sha256": "6f5648c498b18cd54e681feb8edb280ab59a5ac6374d2fbb3eeb0d7e2c8fa0af"
+      "sha256": "3d6bc7330fda00e08b54be51f14ed8727078046d27a4b7e4e10773104e88ba89"
     },
     {
       "path": "docs/DATA.md",
-      "bytes": 6501,
-      "sha256": "5df3e9a025d341c11bc52c096294a4489d3958afd5a40dc2d8fb7429b84da81f"
+      "bytes": 6507,
+      "sha256": "f95c8e758c7a91020204728f94460c7951bbb3e2c3f90cf30a5bfe00fb4a141b"
     },
     {
       "path": "docs/REPRODUCING.md",
-      "bytes": 6087,
-      "sha256": "bbf5efacfcdf8fa179fdc4f265d949c4cded1941c11ef0924e55e38907f34f1d"
+      "bytes": 6106,
+      "sha256": "12f0a67c3c5838b65da912dc9a9d4b6b344dabd54bb9ba8310d3133b58bb8850"
     },
     {
       "path": "model/transition_head.pt",
@@ -95,13 +96,13 @@
     },
     {
       "path": "report/report.html",
-      "bytes": 3338659,
-      "sha256": "4202c0b313a02ff87aa8a306b25560e1f6fc611f84d96ae36603ff3d01ba7206"
+      "bytes": 3339490,
+      "sha256": "3f8564c7e49e0aed1e80f9e5ca10e5271d696de1ababfb2b0473e686d7b0ce12"
     },
     {
       "path": "report/report.pdf",
-      "bytes": 2833335,
-      "sha256": "0bab5b1adab67d9e4fbe65e514791ed3823c76f9882169f1b2f07196727dc783"
+      "bytes": 2834170,
+      "sha256": "53ade1376502ba15948bcd17536f22c9b5215d87fa88a17056ddbae7d49ef2ab"
     },
     {
       "path": "requirements-analysis.txt",
@@ -120,8 +121,8 @@
     },
     {
       "path": "src/analyze.py",
-      "bytes": 3423,
-      "sha256": "062c6b8a740da13dc41964f43ec3decafef9448f1d3caaa03894b24fc5a0f944"
+      "bytes": 3520,
+      "sha256": "26d0cf032065bb3b4c6d2238f4586c71190523501e9492cf501c59fd4437551e"
     },
     {
       "path": "src/analyze_coupling.py",
@@ -135,8 +136,8 @@
     },
     {
       "path": "src/analyze_plateau.py",
-      "bytes": 7549,
-      "sha256": "b0f553313cacc5d3ef4189bf02ba6a2e63817014520dca02825644ab431cc9cf"
+      "bytes": 7538,
+      "sha256": "220cca80d5d709a0f6788a410132a3c4f6c92a0ab9d074421f0a6271acac49d9"
     },
     {
       "path": "src/diagnose_markov.py",
@@ -150,8 +151,8 @@
     },
     {
       "path": "src/figures.py",
-      "bytes": 1856,
-      "sha256": "e2a3a3dffea657f85135165dde1de7bd8b545c795e4bc87ceb1c8b848e8123ce"
+      "bytes": 1913,
+      "sha256": "de1c005a7f82ba228bd897bafa63b4c55dd8f2da1b64b723ceda4d967853df2c"
     },
     {
       "path": "src/markov.py",
@@ -210,8 +211,8 @@
     },
     {
       "path": "src/verify.py",
-      "bytes": 4185,
-      "sha256": "728986c66363639b4459a385111b843fd9b63cec79ee4364c898937bce5379c2"
+      "bytes": 4202,
+      "sha256": "3c774ad78ca05c679db760cbbfba1758493dbfac0ae8e4f54c82bbed5413cb91"
     },
     {
       "path": "tests/test_markov.py",

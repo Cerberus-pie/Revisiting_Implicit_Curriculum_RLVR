@@ -37,7 +37,7 @@ def main():
             raise FileNotFoundError(path)
         files.append({"file": path.name, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()})
     (output / "figures.json").write_text(json.dumps({
-        "report_version": 20, "smoothing": None, "downsampling": None,
+        "report_version": json.loads((ROOT / "MANIFEST.json").read_text())["version"], "smoothing": None, "downsampling": None,
         "measurements_sha256": hashlib.sha256(archive.read_bytes()).hexdigest(), "files": files},
         indent=2) + "\n", encoding="utf-8")
     print(f"Rebuilt all {len(files)} report figures.")

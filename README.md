@@ -1,9 +1,9 @@
 # Revisiting Implicit Curriculum in RLVR
 
 **Reproduction and local analysis of synthetic state tracking**  
-Yankai Ding · Report v20
+Yankai Ding · Report v21
 
-A fixed mixture of easy and hard tasks can create an implicit learning curriculum. This study independently implements the synthetic experiment of Huang et al. and examines the learning process through attention, local transition probabilities, exact reward gradients, and cross-length perturbations.
+A fixed mixture of easy and hard tasks can bootstrap learning on harder tasks. This study independently implements the synthetic experiment of Huang et al. and examines that process through attention, local transition probabilities, exact reward gradients, and cross-length perturbations.
 
 ## Read the report
 
@@ -14,9 +14,11 @@ A fixed mixture of easy and hard tasks can create an implicit learning curriculu
 
 ## What the experiments show
 
-Mixed training improves long-task performance in the main run, but the full learning relay remains incomplete across three training seeds and an additional five-level mixture. Our local measurements reveal internal progress before terminal success rises appreciably. Later, L15 ascent directions improve L45 more frequently even as the L15 reward gradient weakens. These observations characterize a persistent partial solution; they do not yet identify why training reaches it.
+Mixed training enables success on more hard tasks. In the main run, L45 terminal success rises from 1.03% under fixed training to 11.65% under mixed training. Another seed reaches 66.17%; one remains near chance. The results show hard-task bootstrapping with substantial variation, at lower final accuracies than the near-one levels reported across lengths in the original experiment.
 
-Seed 101 remains the main example. Seeds 102 and 103 and the five-level control remain in the report and data, including their unsuccessful outcomes.
+Our local measurements reveal improving attention and local execution before terminal success rises appreciably. Reward-gradient norms peak in length order; later, L15 ascent directions help L45 more often even as the L15 signal weakens. Sharpening attention, polarized prompt outcomes, and shrinking gradients characterize saturation within the main run's partially learned policy. How the learned transition network and actual optimizer updates produce these different learning states remains open.
+
+Seed 101 is the main example. Seeds 102 and 103 and an additional five-level mixture provide the comparisons in the appendices and data.
 
 ## Rebuild from the recorded measurements
 
@@ -31,7 +33,7 @@ python -m src.figures --output reproduced/figures
 
 These commands run on CPU and require no model download, GPU, account, or network connection after installation. They validate the package, recompute the principal numerical summaries, and rebuild all eight report figures from recorded data. Curves use the original measurement grid without smoothing or added samples.
 
-The supplied PDF and HTML are the frozen v20 documents. Rebuilt figures and analysis are written separately under `reproduced/`.
+The supplied PDF and HTML are the v21 documents. Rebuilt figures and analysis are written separately under `reproduced/`.
 
 ## Package structure
 

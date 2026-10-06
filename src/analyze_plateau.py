@@ -104,7 +104,7 @@ def summarize(archive, output):
                               'all_bounds':bounds,
                               'scope':'Local expected reward field on retained prompt sets; excludes entropy, minibatch noise and Adam. Not the observed training direction.'},
         'numerical_check':'Gram bounds verified on 1000 seeded random unit-vector triples',
-        'interpretation':'Persistent polarized prompt outcomes and fixed aggregate attention-hit/full-path counts coexist with collapsing L15 reward gradients and nonzero overall parameter updates. This supports saturation of an incomplete policy; it does not identify the implementation choice that formed that policy.',
+        'interpretation':'Polarized prompt outcomes and fixed aggregate attention-hit/full-path counts coexist with collapsing L15 reward gradients and nonzero overall parameter updates. These measurements characterize saturation within a partially learned policy. Why this learning state forms remains open.',
     }
     Path(output).write_text(json.dumps(evidence, indent=2) + '\n', encoding='utf-8')
     return evidence

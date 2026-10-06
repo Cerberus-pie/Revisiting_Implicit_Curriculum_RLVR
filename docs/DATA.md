@@ -55,12 +55,12 @@ An exact reward gradient integrates out sampled state trajectories for a fixed p
 
 | Figure | Question | Data | Builder |
 |---|---|---|---|
-| 1 | Does mixed training improve terminal performance? | Seed-101 fixed and mixed evaluations | `plot_terminal.py` |
+| 1 | Does mixed training bootstrap success on harder tasks? | Seed-101 fixed and mixed evaluations | `plot_terminal.py` |
 | 2 | What changes internally before terminal success rises? | Seed-101 L45 attention, transition, and sampled-success evaluations | `plot_internal.py` |
 | 3 | How do reward-gradient strengths evolve under the two conditions? | Seed-101 mixed and fixed gradient measurements | `plot_gradients.py` |
 | 4 | Do easier-task ascent directions also help L45? | Seed-101 mixed perturbations, epsilon 0.01 | `plot_gradients.py` |
 | 5 | Do apparently smooth evaluation curves conceal update-level fluctuations? | Both seed-101 training CSV files | `plot_updates.py` |
-| 6 | Does the incomplete relay recur across seeds? | All three seeds' evaluations and mixed gradients | `plot_seeds.py` |
+| 6 | How does hard-task learning vary across seeds? | All three seeds' evaluations and mixed gradients | `plot_seeds.py` |
 | 7 | Does operation selection stabilize in the partial solution? | Seed-101 attention-hit evaluations | `plot_terminal.py` |
 | 8 | What changes with a denser length mixture? | Fixed, three-level, and five-level seed-101 evaluations | `plot_mixture.py` |
 

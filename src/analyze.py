@@ -20,8 +20,9 @@ def main():
     output = Path(args.output)
     output.mkdir(parents=True, exist_ok=True)
     archive = ROOT / "data/measurements.zip"
-    result = {"report_version": 20, "runs": {}, "main_seed": 101,
-              "completion_rule": "Greedy terminal success >= 0.99 at every trained length at every evaluation from update 39000 through 40000."}
+    version = json.loads((ROOT / "MANIFEST.json").read_text())["version"]
+    result = {"report_version": version, "runs": {}, "main_seed": 101,
+              "accuracy_criterion": "Greedy terminal success >= 0.99 at every trained length at every evaluation from update 39000 through 40000."}
     with zipfile.ZipFile(archive) as z:
         for path in sorted((ROOT / "configs").glob("*.json")):
             if path.stem == "pretraining":
@@ -34,7 +35,7 @@ def main():
                 for r in ev if r["step"] == 40000}
             late = [r for r in ev if r["step"] >= 39000 and r["length"] in config["train_lengths"]]
             result["runs"][path.stem] = {"trained_lengths": config["train_lengths"], "final": final,
-                "completed_relay": all(r["greedy_success"] >= .99 for r in late),
+                "near_perfect_terminal_accuracy": all(r["greedy_success"] >= .99 for r in late),
                 "first_50_percent": {str(l): next((int(r["step"]) for r in ev
                      if r["length"] == l and r["greedy_success"] >= .5), None) for l in config["eval_lengths"]}}
         ev = rows(z, "runs/mixed5_15_45_seed101/eval.csv")

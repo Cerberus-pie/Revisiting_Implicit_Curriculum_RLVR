@@ -1,8 +1,8 @@
 {
-  "report_version": 20,
+  "report_version": 21,
   "reports": {
-    "report/report.pdf": "0bab5b1adab67d9e4fbe65e514791ed3823c76f9882169f1b2f07196727dc783",
-    "report/report.html": "4202c0b313a02ff87aa8a306b25560e1f6fc611f84d96ae36603ff3d01ba7206"
+    "report/report.pdf": "53ade1376502ba15948bcd17536f22c9b5215d87fa88a17056ddbae7d49ef2ab",
+    "report/report.html": "3f8564c7e49e0aed1e80f9e5ca10e5271d696de1ababfb2b0473e686d7b0ce12"
   },
   "source_archives": {
     "seed101": {
