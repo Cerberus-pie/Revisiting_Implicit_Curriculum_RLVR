@@ -1,6 +1,6 @@
 {
   "title": "Revisiting Implicit Curriculum in RLVR",
-  "version": 21,
+  "version": 22,
   "package_checks": {
     "figures_rebuilt_and_pixel_matched": 8,
     "mathematical_tests_passed": 8,
@@ -11,7 +11,7 @@
     "measurement_rows": 132839,
     "scope": "Offline package verification and small implementation checks; the full experiments were not retrained for packaging.",
     "report_bytes_match_source": true,
-    "report_revision": "Hard-task bootstrapping is the main outcome; near-perfect terminal accuracy is an endpoint criterion."
+    "report_revision": "Clarify the L15 saturation evidence and the 16-prompt local response; retain hard-task bootstrapping as the central outcome."
   },
   "files": [
     {
@@ -26,8 +26,8 @@
     },
     {
       "path": "README.md",
-      "bytes": 4469,
-      "sha256": "82c17219a3f162e8ddb806671cc943b9723acc678317d5e5a5eab96d92218bf5"
+      "bytes": 4485,
+      "sha256": "846d0799cdbe15364b4eb127592ac766824cf54877d7458007e8b06c759b2849"
     },
     {
       "path": "configs/fixed45_seed101.json",
@@ -77,7 +77,7 @@
     {
       "path": "data/provenance.json",
       "bytes": 22714,
-      "sha256": "3d6bc7330fda00e08b54be51f14ed8727078046d27a4b7e4e10773104e88ba89"
+      "sha256": "022f9fe01e4e52c39312062bb3c4918c89451dffd2a2e92c236cca6dfeb0f465"
     },
     {
       "path": "docs/DATA.md",
@@ -96,13 +96,13 @@
     },
     {
       "path": "report/report.html",
-      "bytes": 3339490,
-      "sha256": "3f8564c7e49e0aed1e80f9e5ca10e5271d696de1ababfb2b0473e686d7b0ce12"
+      "bytes": 3339348,
+      "sha256": "f5a2706751969dad4f13a7acee34dd6aeb7cb69094955bf52000a96292d61780"
     },
     {
       "path": "report/report.pdf",
-      "bytes": 2834170,
-      "sha256": "53ade1376502ba15948bcd17536f22c9b5215d87fa88a17056ddbae7d49ef2ab"
+      "bytes": 2834070,
+      "sha256": "7f8a574680b734c3cb453393c3c780e78b973260ef31393abbf399075496a114"
     },
     {
       "path": "requirements-analysis.txt",
