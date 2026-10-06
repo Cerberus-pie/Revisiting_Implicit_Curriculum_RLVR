@@ -1,0 +1,658 @@
+{
+  "report_version": 20,
+  "reports": {
+    "report/report.pdf": "0bab5b1adab67d9e4fbe65e514791ed3823c76f9882169f1b2f07196727dc783",
+    "report/report.html": "4202c0b313a02ff87aa8a306b25560e1f6fc611f84d96ae36603ff3d01ba7206"
+  },
+  "source_archives": {
+    "seed101": {
+      "sha256": "f36352e2befad36427e421c48b1f06452201d5331b60655c4759f2f995f0f911"
+    },
+    "fixed101_repeat": {
+      "sha256": "9d1ad9814810007f3aee7cef2aafcdb0de70e4f710efe9cf3ffc090d5b70abf3"
+    },
+    "seed102": {
+      "sha256": "8b7d0fe5efcb816ff2f9491d3169692acc39a4de3894125bc4ca01043dcb7d18"
+    },
+    "seed103": {
+      "sha256": "7f7f22bd6cef378d02733a4b6b546bb5368d1e58f4ef457c0720a749a75b4a4c"
+    },
+    "five_level101": {
+      "sha256": "125a5028c9703dfe79307ac0054ecd61d83582f2dd1db6ca2c97b2b2043b0fb5"
+    },
+    "fixed101_extended": {
+      "sha256": "cfab5376adb2746fd8cfd0aa91551033a8570903b1b36ceb976b0d6059d1e76e"
+    }
+  },
+  "measurements": [
+    {
+      "member": "runs/fixed45_seed101/train.csv",
+      "sha256": "47951361a46c746580182391374089dab4b538d78c2a87392a138e22935d45bc",
+      "bytes": 9709266,
+      "rows": 40000,
+      "columns": [
+        "step",
+        "baseline",
+        "by_length.45.attention_hit",
+        "by_length.45.attention_mass",
+        "by_length.45.correct_transition_prob",
+        "by_length.45.entropy",
+        "by_length.45.n",
+        "by_length.45.reward",
+        "by_length.45.trajectory_correct",
+        "elapsed_seconds",
+        "gradient_norm",
+        "loss",
+        "observation_model_step",
+        "parameter_update_norm",
+        "reward",
+        "sequences",
+        "state_steps"
+      ],
+      "source_archive": "seed101",
+      "source_member": "runs/fixed45_seed101/train.csv"
+    },
+    {
+      "member": "runs/fixed45_seed101/eval.csv",
+      "sha256": "d467fe403945c6db93912e67fb6f8565f577aadd528d38af482c604879c8d1cb",
+      "bytes": 218707,
+      "rows": 801,
+      "columns": [
+        "step",
+        "length",
+        "attention_hit",
+        "attention_mass",
+        "correct_transition_prob",
+        "entropy",
+        "greedy_success",
+        "greedy_trajectory_correct",
+        "n_eval",
+        "sampled_success",
+        "standard_errors.attention_hit",
+        "standard_errors.attention_mass",
+        "standard_errors.correct_transition_prob",
+        "standard_errors.entropy",
+        "standard_errors.greedy_success",
+        "standard_errors.greedy_trajectory_correct",
+        "standard_errors.sampled_success"
+      ],
+      "source_archive": "seed101",
+      "source_member": "runs/fixed45_seed101/eval.csv"
+    },
+    {
+      "member": "runs/mixed5_15_45_seed101/train.csv",
+      "sha256": "8b4207d4b53a548122eb8a4445243ef5d1e1cdd56b0282fc3cd3bab7c84ba193",
+      "bytes": 19331005,
+      "rows": 40000,
+      "columns": [
+        "step",
+        "baseline",
+        "by_length.15.attention_hit",
+        "by_length.15.attention_mass",
+        "by_length.15.correct_transition_prob",
+        "by_length.15.entropy",
+        "by_length.15.n",
+        "by_length.15.reward",
+        "by_length.15.trajectory_correct",
+        "by_length.45.attention_hit",
+        "by_length.45.attention_mass",
+        "by_length.45.correct_transition_prob",
+        "by_length.45.entropy",
+        "by_length.45.n",
+        "by_length.45.reward",
+        "by_length.45.trajectory_correct",
+        "by_length.5.attention_hit",
+        "by_length.5.attention_mass",
+        "by_length.5.correct_transition_prob",
+        "by_length.5.entropy",
+        "by_length.5.n",
+        "by_length.5.reward",
+        "by_length.5.trajectory_correct",
+        "elapsed_seconds",
+        "gradient_norm",
+        "loss",
+        "observation_model_step",
+        "parameter_update_norm",
+        "reward",
+        "sequences",
+        "state_steps"
+      ],
+      "source_archive": "seed101",
+      "source_member": "runs/mixed5_15_45_seed101/train.csv"
+    },
+    {
+      "member": "runs/mixed5_15_45_seed101/eval.csv",
+      "sha256": "29daac0257e88294dfe9c7588cb3117e9367bc636607e4d7acb6740aed60f21e",
+      "bytes": 677155,
+      "rows": 2403,
+      "columns": [
+        "step",
+        "length",
+        "attention_hit",
+        "attention_mass",
+        "correct_transition_prob",
+        "entropy",
+        "greedy_success",
+        "greedy_trajectory_correct",
+        "n_eval",
+        "sampled_success",
+        "standard_errors.attention_hit",
+        "standard_errors.attention_mass",
+        "standard_errors.correct_transition_prob",
+        "standard_errors.entropy",
+        "standard_errors.greedy_success",
+        "standard_errors.greedy_trajectory_correct",
+        "standard_errors.sampled_success"
+      ],
+      "source_archive": "seed101",
+      "source_member": "runs/mixed5_15_45_seed101/eval.csv"
+    },
+    {
+      "member": "diagnostics/gradient_seed101/measurements.csv",
+      "sha256": "64a8308fe50147b43a69adcf8a0241ed06a8e5b6a698333aecfa3a2a4f5e941d",
+      "bytes": 1501803,
+      "rows": 3609,
+      "columns": [
+        "step",
+        "length",
+        "kind",
+        "n_prompts",
+        "normalization",
+        "per_prompt_probabilities",
+        "probability",
+        "repeat",
+        "reward_gradient_norm"
+      ],
+      "source_archive": "seed101",
+      "source_member": "diagnostics/gradient_seed101/measurements.csv"
+    },
+    {
+      "member": "diagnostics/transfer_seed101/measurements.csv",
+      "sha256": "a691830248e66bcbdacebeb2f460f3686e06a73c47657c7ce8981b53a1473ead",
+      "bytes": 140259,
+      "rows": 441,
+      "columns": [
+        "step",
+        "length",
+        "central_difference",
+        "directional_derivative",
+        "epsilon",
+        "finite_difference_resolved",
+        "gradient_cosine",
+        "kind",
+        "n_prompts",
+        "negative_change",
+        "negative_probability",
+        "normalization",
+        "per_prompt_probabilities",
+        "positive_change",
+        "positive_probability",
+        "probability",
+        "relative_difference",
+        "repeat",
+        "reward_gradient_norm",
+        "source",
+        "target",
+        "target_probability"
+      ],
+      "source_archive": "seed101",
+      "source_member": "diagnostics/transfer_seed101/measurements.csv"
+    },
+    {
+      "member": "diagnostics/gradient_fixed101/measurements.csv",
+      "sha256": "5ce547cb99019f10a29439bf9ad0ef2a509b7b368fe16edefad52e47e189bb83",
+      "bytes": 1546201,
+      "rows": 3609,
+      "columns": [
+        "step",
+        "length",
+        "kind",
+        "n_prompts",
+        "normalization",
+        "per_prompt_probabilities",
+        "probability",
+        "repeat",
+        "reward_gradient_norm"
+      ],
+      "source_archive": "fixed101_repeat",
+      "source_member": "diagnostics/gradient_fixed101/measurements.csv"
+    },
+    {
+      "member": "runs/fixed45_seed102/eval.csv",
+      "sha256": "892e3053cdcfa7d70e9b261ff47b61779a1771a9ed6b073cae20f17ae4852c00",
+      "bytes": 219138,
+      "rows": 801,
+      "columns": [
+        "step",
+        "length",
+        "attention_hit",
+        "attention_mass",
+        "correct_transition_prob",
+        "entropy",
+        "greedy_success",
+        "greedy_trajectory_correct",
+        "n_eval",
+        "sampled_success",
+        "standard_errors.attention_hit",
+        "standard_errors.attention_mass",
+        "standard_errors.correct_transition_prob",
+        "standard_errors.entropy",
+        "standard_errors.greedy_success",
+        "standard_errors.greedy_trajectory_correct",
+        "standard_errors.sampled_success"
+      ],
+      "source_archive": "seed102",
+      "source_member": "runs/fixed45_seed102/eval.csv"
+    },
+    {
+      "member": "runs/mixed5_15_45_seed102/eval.csv",
+      "sha256": "934a6d0c74b4916a1058bdc9afebfa942b227515e6e15c37aa0e1f81133fb4a8",
+      "bytes": 699871,
+      "rows": 2403,
+      "columns": [
+        "step",
+        "length",
+        "attention_hit",
+        "attention_mass",
+        "correct_transition_prob",
+        "entropy",
+        "greedy_success",
+        "greedy_trajectory_correct",
+        "n_eval",
+        "sampled_success",
+        "standard_errors.attention_hit",
+        "standard_errors.attention_mass",
+        "standard_errors.correct_transition_prob",
+        "standard_errors.entropy",
+        "standard_errors.greedy_success",
+        "standard_errors.greedy_trajectory_correct",
+        "standard_errors.sampled_success"
+      ],
+      "source_archive": "seed102",
+      "source_member": "runs/mixed5_15_45_seed102/eval.csv"
+    },
+    {
+      "member": "diagnostics/gradient_fixed45_seed102/measurements.csv",
+      "sha256": "68cd599d507a8ffd6642b71dfafbf88c7533d912ab9b94f6294e22896fc09db2",
+      "bytes": 1545449,
+      "rows": 3609,
+      "columns": [
+        "step",
+        "length",
+        "kind",
+        "n_prompts",
+        "normalization",
+        "per_prompt_probabilities",
+        "probability",
+        "repeat",
+        "reward_gradient_norm"
+      ],
+      "source_archive": "seed102",
+      "source_member": "diagnostics/gradient_fixed45_seed102/measurements.csv"
+    },
+    {
+      "member": "diagnostics/gradient_mixed5_15_45_seed102/measurements.csv",
+      "sha256": "812dc2914c985000a715b725bc135ab014c287bc554ba34fbba4dd5d69d5c5b4",
+      "bytes": 1474844,
+      "rows": 3609,
+      "columns": [
+        "step",
+        "length",
+        "kind",
+        "n_prompts",
+        "normalization",
+        "per_prompt_probabilities",
+        "probability",
+        "repeat",
+        "reward_gradient_norm"
+      ],
+      "source_archive": "seed102",
+      "source_member": "diagnostics/gradient_mixed5_15_45_seed102/measurements.csv"
+    },
+    {
+      "member": "diagnostics/transfer_mixed5_15_45_seed102/measurements.csv",
+      "sha256": "ec1d8039456447a6b9bd275b3033d6166c485177f49de42d711f429e38fcd26f",
+      "bytes": 138339,
+      "rows": 441,
+      "columns": [
+        "step",
+        "length",
+        "central_difference",
+        "directional_derivative",
+        "epsilon",
+        "finite_difference_resolved",
+        "gradient_cosine",
+        "kind",
+        "n_prompts",
+        "negative_change",
+        "negative_probability",
+        "normalization",
+        "per_prompt_probabilities",
+        "positive_change",
+        "positive_probability",
+        "probability",
+        "relative_difference",
+        "repeat",
+        "reward_gradient_norm",
+        "source",
+        "target",
+        "target_probability"
+      ],
+      "source_archive": "seed102",
+      "source_member": "diagnostics/transfer_mixed5_15_45_seed102/measurements.csv"
+    },
+    {
+      "member": "runs/fixed45_seed103/eval.csv",
+      "sha256": "48d287c4d3419b01b5078bf54bcc78c408bda932933c541c7d8a6e232fc9c6f0",
+      "bytes": 219156,
+      "rows": 801,
+      "columns": [
+        "step",
+        "length",
+        "attention_hit",
+        "attention_mass",
+        "correct_transition_prob",
+        "entropy",
+        "greedy_success",
+        "greedy_trajectory_correct",
+        "n_eval",
+        "sampled_success",
+        "standard_errors.attention_hit",
+        "standard_errors.attention_mass",
+        "standard_errors.correct_transition_prob",
+        "standard_errors.entropy",
+        "standard_errors.greedy_success",
+        "standard_errors.greedy_trajectory_correct",
+        "standard_errors.sampled_success"
+      ],
+      "source_archive": "seed103",
+      "source_member": "runs/fixed45_seed103/eval.csv"
+    },
+    {
+      "member": "runs/mixed5_15_45_seed103/eval.csv",
+      "sha256": "28e2078a0e1c72bc753eb1f761bfc51270282b572b9ef67dcab0df187005a67f",
+      "bytes": 678217,
+      "rows": 2403,
+      "columns": [
+        "step",
+        "length",
+        "attention_hit",
+        "attention_mass",
+        "correct_transition_prob",
+        "entropy",
+        "greedy_success",
+        "greedy_trajectory_correct",
+        "n_eval",
+        "sampled_success",
+        "standard_errors.attention_hit",
+        "standard_errors.attention_mass",
+        "standard_errors.correct_transition_prob",
+        "standard_errors.entropy",
+        "standard_errors.greedy_success",
+        "standard_errors.greedy_trajectory_correct",
+        "standard_errors.sampled_success"
+      ],
+      "source_archive": "seed103",
+      "source_member": "runs/mixed5_15_45_seed103/eval.csv"
+    },
+    {
+      "member": "diagnostics/gradient_fixed45_seed103/measurements.csv",
+      "sha256": "60288eb14e6320f84194dff74e6becd2a90da6df69777ae794fb6650a6f273d9",
+      "bytes": 1545877,
+      "rows": 3609,
+      "columns": [
+        "step",
+        "length",
+        "kind",
+        "n_prompts",
+        "normalization",
+        "per_prompt_probabilities",
+        "probability",
+        "repeat",
+        "reward_gradient_norm"
+      ],
+      "source_archive": "seed103",
+      "source_member": "diagnostics/gradient_fixed45_seed103/measurements.csv"
+    },
+    {
+      "member": "diagnostics/gradient_mixed5_15_45_seed103/measurements.csv",
+      "sha256": "be40a93c65ba3088207920206fc4fb9be44577c2676830b93394ef3fb3f9e534",
+      "bytes": 1515594,
+      "rows": 3609,
+      "columns": [
+        "step",
+        "length",
+        "kind",
+        "n_prompts",
+        "normalization",
+        "per_prompt_probabilities",
+        "probability",
+        "repeat",
+        "reward_gradient_norm"
+      ],
+      "source_archive": "seed103",
+      "source_member": "diagnostics/gradient_mixed5_15_45_seed103/measurements.csv"
+    },
+    {
+      "member": "diagnostics/transfer_mixed5_15_45_seed103/measurements.csv",
+      "sha256": "5bda5b6caa3a0fee9b6e16251a11da7d9bceef62ab0ad97fc52a592366cee2eb",
+      "bytes": 141571,
+      "rows": 441,
+      "columns": [
+        "step",
+        "length",
+        "central_difference",
+        "directional_derivative",
+        "epsilon",
+        "finite_difference_resolved",
+        "gradient_cosine",
+        "kind",
+        "n_prompts",
+        "negative_change",
+        "negative_probability",
+        "normalization",
+        "per_prompt_probabilities",
+        "positive_change",
+        "positive_probability",
+        "probability",
+        "relative_difference",
+        "repeat",
+        "reward_gradient_norm",
+        "source",
+        "target",
+        "target_probability"
+      ],
+      "source_archive": "seed103",
+      "source_member": "diagnostics/transfer_mixed5_15_45_seed103/measurements.csv"
+    },
+    {
+      "member": "runs/mixed5_10_20_40_45_seed101/eval.csv",
+      "sha256": "01eb40998c70d5330599b87e43ae392e94cdd9579931ee32e420e747915b3cb0",
+      "bytes": 1389390,
+      "rows": 4806,
+      "columns": [
+        "step",
+        "length",
+        "attention_hit",
+        "attention_mass",
+        "correct_transition_prob",
+        "entropy",
+        "greedy_success",
+        "greedy_trajectory_correct",
+        "n_eval",
+        "sampled_success",
+        "standard_errors.attention_hit",
+        "standard_errors.attention_mass",
+        "standard_errors.correct_transition_prob",
+        "standard_errors.entropy",
+        "standard_errors.greedy_success",
+        "standard_errors.greedy_trajectory_correct",
+        "standard_errors.sampled_success"
+      ],
+      "source_archive": "five_level101",
+      "source_member": "runs/mixed5_10_20_40_45_seed101/eval.csv"
+    },
+    {
+      "member": "diagnostics/gradient_mixed5_10_20_40_45_seed101/measurements.csv",
+      "sha256": "ebc00ad98a98bb737c82fdbc3a735e552245e848f3afbcd22fad90266090f4b9",
+      "bytes": 2989908,
+      "rows": 7218,
+      "columns": [
+        "step",
+        "length",
+        "kind",
+        "n_prompts",
+        "normalization",
+        "per_prompt_probabilities",
+        "probability",
+        "repeat",
+        "reward_gradient_norm"
+      ],
+      "source_archive": "five_level101",
+      "source_member": "diagnostics/gradient_mixed5_10_20_40_45_seed101/measurements.csv"
+    },
+    {
+      "member": "diagnostics/transfer_mixed5_10_20_40_45_seed101/measurements.csv",
+      "sha256": "e699580a70385110cbc142efce4ffa84624c8985fcd63222f915a27b58547398",
+      "bytes": 308223,
+      "rows": 1008,
+      "columns": [
+        "step",
+        "length",
+        "central_difference",
+        "directional_derivative",
+        "epsilon",
+        "finite_difference_resolved",
+        "gradient_cosine",
+        "kind",
+        "n_prompts",
+        "negative_change",
+        "negative_probability",
+        "normalization",
+        "per_prompt_probabilities",
+        "positive_change",
+        "positive_probability",
+        "probability",
+        "relative_difference",
+        "repeat",
+        "reward_gradient_norm",
+        "source",
+        "target",
+        "target_probability"
+      ],
+      "source_archive": "five_level101",
+      "source_member": "diagnostics/transfer_mixed5_10_20_40_45_seed101/measurements.csv"
+    },
+    {
+      "member": "diagnostics/gradient_fixed101_extended/measurements.csv",
+      "sha256": "b60d2be1ec8d37557fe3c0e772409cf20592ac48aa4aa773d778039a022d74d3",
+      "bytes": 3094346,
+      "rows": 7218,
+      "columns": [
+        "kind",
+        "length",
+        "n_prompts",
+        "normalization",
+        "per_prompt_probabilities",
+        "probability",
+        "repeat",
+        "reward_gradient_norm",
+        "step"
+      ],
+      "source_archive": "fixed101_extended",
+      "source_member": "measurements.csv"
+    }
+  ],
+  "implementation": {
+    "model.py": {
+      "original_sha256": "cbf1628ddd04a9bfacbfda79fc21679a65750194789a452603811b802581b7e8",
+      "package_sha256": "cbf1628ddd04a9bfacbfda79fc21679a65750194789a452603811b802581b7e8",
+      "adaptation": "None; identical implementation."
+    },
+    "train.py": {
+      "original_sha256": "848fd4428b5819e336cae9ee6b95ae5ee5c4ec963aa953653aa702a1a2beb24b",
+      "package_sha256": "6c0941fc0f9edffb886dc29f122d95c4a79709c362aa393881f6ba86e9313d86",
+      "adaptation": "Removed an unused cost metadata field; training and evaluation calculations unchanged."
+    },
+    "markov.py": {
+      "original_sha256": "52dbf9e56163c68584f4b01817f448843d0c0c40c74726f286c48192a799d169",
+      "package_sha256": "52dbf9e56163c68584f4b01817f448843d0c0c40c74726f286c48192a799d169",
+      "adaptation": "None; identical implementation."
+    },
+    "pretrain.py": {
+      "original_sha256": "b38eaaed164c9af3d89660476ae77ab6e2f1250f58135b225a9f32038fd95d5e",
+      "package_sha256": "b38eaaed164c9af3d89660476ae77ab6e2f1250f58135b225a9f32038fd95d5e",
+      "adaptation": "None; identical implementation."
+    },
+    "diagnose_markov.py": {
+      "original_sha256": "0ea91365804a210cc9022d9754a3f50dc189fb8e831b171345e67578c2036c4b",
+      "package_sha256": "0ea91365804a210cc9022d9754a3f50dc189fb8e831b171345e67578c2036c4b",
+      "adaptation": "None; identical implementation."
+    },
+    "diagnose_ratio.py": {
+      "original_sha256": "044ef74c0faedd7bcd4d80d6345e33f9c9a18e4e785410500a618afdb28e013f",
+      "package_sha256": "044ef74c0faedd7bcd4d80d6345e33f9c9a18e4e785410500a618afdb28e013f",
+      "adaptation": "None; identical implementation."
+    }
+  },
+  "configs": {
+    "fixed45_seed101": {
+      "source_archive": "seed101",
+      "source_member": "runs/fixed45_seed101/config.json",
+      "source_sha256": "4f6f3ae166cfa65d044aec8bb5c39609cb61e2d1b7fa5b620ebce7bd4a8a46b3",
+      "adaptation": "Descriptive label; removed local_run metadata; ten-day time guard. Scientific settings unchanged."
+    },
+    "mixed5_15_45_seed101": {
+      "source_archive": "seed101",
+      "source_member": "runs/mixed5_15_45_seed101/config.json",
+      "source_sha256": "3d350c79cfe74225785b069e9a54aff65831d016e82e28923e3a819b3085731e",
+      "adaptation": "Descriptive label; removed local_run metadata; ten-day time guard. Scientific settings unchanged."
+    },
+    "fixed45_seed102": {
+      "source_archive": "seed102",
+      "source_member": "runs/fixed45_seed102/config.json",
+      "source_sha256": "a4e5f02ea4efceb46a9c9fcd483ea1507f44a0679f351c6f2b122111d36684c6",
+      "adaptation": "Descriptive label; removed local_run metadata; ten-day time guard. Scientific settings unchanged."
+    },
+    "mixed5_15_45_seed102": {
+      "source_archive": "seed102",
+      "source_member": "runs/mixed5_15_45_seed102/config.json",
+      "source_sha256": "0e4e97dab3692b93d0abb24bcf08f3cc98fb1ba84154069954f4397f6ae98e95",
+      "adaptation": "Descriptive label; removed local_run metadata; ten-day time guard. Scientific settings unchanged."
+    },
+    "fixed45_seed103": {
+      "source_archive": "seed103",
+      "source_member": "runs/fixed45_seed103/config.json",
+      "source_sha256": "32e82de153b89e7a578c2b4b40c137e354941c161e04fd6ed5baf6e95ebca88b",
+      "adaptation": "Descriptive label; removed local_run metadata; ten-day time guard. Scientific settings unchanged."
+    },
+    "mixed5_15_45_seed103": {
+      "source_archive": "seed103",
+      "source_member": "runs/mixed5_15_45_seed103/config.json",
+      "source_sha256": "c54c3d5fa921b8dc1da9ae1501e3bf284b2902b40560f5166c1fd186df047613",
+      "adaptation": "Descriptive label; removed local_run metadata; ten-day time guard. Scientific settings unchanged."
+    },
+    "mixed5_10_20_40_45_seed101": {
+      "source_archive": "five_level101",
+      "source_member": "runs/mixed5_10_20_40_45_seed101/config.json",
+      "source_sha256": "7a77b56b28dd6247720557105c450325640f7e13188c1a7eecb43e1fafb0f7a0",
+      "adaptation": "Descriptive label; removed local_run metadata; ten-day time guard. Scientific settings unchanged."
+    }
+  },
+  "frozen_head": {
+    "original_checkpoint_sha256": "6c137bee61e5c34f80045d8ecb3c1e2cdc2dc2013fa8cadfaafb86148b907369",
+    "package_checkpoint_sha256": "379b4c75ad129927d6d8e2d06819d59804691d74e34823b22c3e80f50c9785fd",
+    "adaptation": "Re-serialized without launch arguments or timing metadata; every weight tensor is bitwise identical.",
+    "tensors": {
+      "weight": {
+        "shape": [
+          96,
+          384,
+          192
+        ],
+        "dtype": "torch.float32",
+        "sha256": "0358070622574d2fb1f9bb8dd70fc8f319b52505efac06be5d7bef01789f8316"
+      }
+    }
+  }
+}

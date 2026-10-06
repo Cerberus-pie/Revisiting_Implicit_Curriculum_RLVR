@@ -1,0 +1,42 @@
+{
+  "label": "mixed5_10_20_40_45_seed101",
+  "head": "learned",
+  "d": 96,
+  "n_positions": 64,
+  "batch_size": 512,
+  "optimizer": "adam",
+  "learning_rate": 0.01,
+  "baseline_momentum": 0.95,
+  "entropy_bonus": 0.001,
+  "steps": 40000,
+  "max_seconds": 864000,
+  "task_seed": 2026,
+  "eval_every": 50,
+  "eval_batches": 30,
+  "eval_batch_size": 512,
+  "diagnostic_every": 0,
+  "save_update_every": 2000,
+  "checkpoint_every": 2000,
+  "snapshot_every": 50,
+  "record_process_metrics": true,
+  "log_every": 1,
+  "print_every": 1000,
+  "matmul_precision": "highest",
+  "completion_check": null,
+  "train_lengths": [
+    5,
+    10,
+    20,
+    40,
+    45
+  ],
+  "eval_lengths": [
+    5,
+    10,
+    15,
+    20,
+    40,
+    45
+  ],
+  "seed": 101
+}

@@ -1,0 +1,57 @@
+# Revisiting Implicit Curriculum in RLVR
+
+**Reproduction and local analysis of synthetic state tracking**  
+Yankai Ding · Report v20
+
+A fixed mixture of easy and hard tasks can create an implicit learning curriculum. This study independently implements the synthetic experiment of Huang et al. and examines the learning process through attention, local transition probabilities, exact reward gradients, and cross-length perturbations.
+
+## Read the report
+
+- [PDF report](report/report.pdf) — six main pages and five appendices.
+- [HTML report](report/report.html) — the same report, with all figures embedded; opens offline.
+- [Data and figure guide](docs/DATA.md) — what each measurement means and which files support each figure.
+- [Reproduction guide](docs/REPRODUCING.md) — rebuild the analysis, inspect the implementation, or rerun training.
+
+## What the experiments show
+
+Mixed training improves long-task performance in the main run, but the full learning relay remains incomplete across three training seeds and an additional five-level mixture. Our local measurements reveal internal progress before terminal success rises appreciably. Later, L15 ascent directions improve L45 more frequently even as the L15 reward gradient weakens. These observations characterize a persistent partial solution; they do not yet identify why training reaches it.
+
+Seed 101 remains the main example. Seeds 102 and 103 and the five-level control remain in the report and data, including their unsuccessful outcomes.
+
+## Rebuild from the recorded measurements
+
+From this directory, using Python 3.12 or newer:
+
+```sh
+python -m pip install -r requirements-analysis.txt
+python -m src.verify
+python -m src.analyze --output reproduced/analysis
+python -m src.figures --output reproduced/figures
+```
+
+These commands run on CPU and require no model download, GPU, account, or network connection after installation. They validate the package, recompute the principal numerical summaries, and rebuild all eight report figures from recorded data. Curves use the original measurement grid without smoothing or added samples.
+
+The supplied PDF and HTML are the frozen v20 documents. Rebuilt figures and analysis are written separately under `reproduced/`.
+
+## Package structure
+
+```text
+report/       Frozen PDF and self-contained HTML
+data/         Recorded measurements, source hashes, and provenance
+model/        The frozen transition head used in the experiments
+configs/      Seven training configurations and head pretraining settings
+src/          Model, training, exact diagnostics, analysis, and figure code
+tests/        Enumeration, gradient, and task-construction checks
+docs/         Data dictionary and reproduction instructions
+MANIFEST.json SHA256 inventory of the distributed files
+```
+
+The measurement archive contains evaluations and local diagnostics for every reported condition, plus per-update seed-101 measurements used to examine training fluctuations and the plateau. The frozen head is included so a fresh training run uses the same atomic model. Full optimizer histories and policy snapshots are not needed to reconstruct the report and are not included; fresh training writes new snapshots for its own local measurements.
+
+## Implementation and attribution
+
+The implementation is independent of the original authors' code. The original experiment supplies the reproduction target; the trajectory-level measurements, reward-gradient tracking, and finite local perturbations are the additional analyses developed for this study. See Sections 3–5 and the implementation appendix for their definitions.
+
+Source paper: Yu Huang et al., *On the Emergence of Implicit Curriculum in RLVR Learning Dynamics*, ICML 2026, PMLR 306:47891–47938. [Conference paper](https://proceedings.mlr.press/v306/huang26bk.html) · [Experimental exposition, Section 7.1](https://arxiv.org/html/2602.14872v3#S7.SS1).
+
+OpenAI Codex assisted extensively with experimental design, code, execution, analysis, figures, and writing. The author directed the study and is responsible for the final report.

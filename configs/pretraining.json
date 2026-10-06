@@ -1,0 +1,12 @@
+{
+  "d": 96,
+  "units_per_class": 384,
+  "steps": 6000,
+  "batch_size": 1024,
+  "lr": 0.003,
+  "seed": 17,
+  "initialization": "random",
+  "negative_slope": 0.01,
+  "eval_every": 500,
+  "target_probability": 1.0
+}

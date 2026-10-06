@@ -1,0 +1,227 @@
+{
+  "title": "Revisiting Implicit Curriculum in RLVR",
+  "version": 20,
+  "package_checks": {
+    "report_bytes_unchanged": true,
+    "figures_rebuilt_and_pixel_matched": 8,
+    "mathematical_tests_passed": 8,
+    "frozen_head_weight_tensors_identical": true,
+    "training_smoke_updates": 2,
+    "local_perturbation_smoke_check": "passed",
+    "measurement_tables": 21,
+    "measurement_rows": 132839,
+    "scope": "Offline package verification and small implementation checks; the full experiments were not retrained for packaging."
+  },
+  "files": [
+    {
+      "path": ".gitattributes",
+      "bytes": 79,
+      "sha256": "48ab1f76e36ab39483f8acd5dc490d996630d31e4916fcb0c60aa9593e3f3d0d"
+    },
+    {
+      "path": ".gitignore",
+      "bytes": 44,
+      "sha256": "89b9695e9ba641380c3604135d69480f7fb76c692a0b1974794392b6c20c7792"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4092,
+      "sha256": "bad5ddb86382afea4eac359a34ab068cfcae4eb9f8709c52a4038b59e717de1c"
+    },
+    {
+      "path": "configs/fixed45_seed101.json",
+      "bytes": 697,
+      "sha256": "70947fccc5358999750554b846e7c461f1049f6c6b591f979d81df9b936e8b6a"
+    },
+    {
+      "path": "configs/fixed45_seed102.json",
+      "bytes": 697,
+      "sha256": "694e25fe6e64968e2b49ecac19c18ba251bac1166051c0180a0dc4196e0be5de"
+    },
+    {
+      "path": "configs/fixed45_seed103.json",
+      "bytes": 697,
+      "sha256": "7bf89dddea7aed7063d3d77767ccbf54592d1af970e22c81824b386f08e0beb6"
+    },
+    {
+      "path": "configs/mixed5_10_20_40_45_seed101.json",
+      "bytes": 787,
+      "sha256": "3a4f2a866ab346a77a2de7cd21769cd5af8bd6b7e1d7d4bbe9a17be2abb03243"
+    },
+    {
+      "path": "configs/mixed5_15_45_seed101.json",
+      "bytes": 736,
+      "sha256": "f2c78602dc42ff154e41843ac2b8678f3189bfdea9863bae1039431479ae5dd0"
+    },
+    {
+      "path": "configs/mixed5_15_45_seed102.json",
+      "bytes": 736,
+      "sha256": "318af226ff85793833a56772d68ef48396a93dd7a69a2e5f8432fa7d6c87d673"
+    },
+    {
+      "path": "configs/mixed5_15_45_seed103.json",
+      "bytes": 736,
+      "sha256": "039761e73933c781c7afbe8642a51833c5f3671551227f8705aae106e36b5fd9"
+    },
+    {
+      "path": "configs/pretraining.json",
+      "bytes": 226,
+      "sha256": "7d0fb38d0da2e193d536c3565e9e5d11edffbffecbe2fadef371006434e4d580"
+    },
+    {
+      "path": "data/measurements.zip",
+      "bytes": 19064686,
+      "sha256": "acd9ada5a193eab21f7fa6bc1ccba6f3f190a031bcff6e8b56839949751eedd7"
+    },
+    {
+      "path": "data/provenance.json",
+      "bytes": 22714,
+      "sha256": "6f5648c498b18cd54e681feb8edb280ab59a5ac6374d2fbb3eeb0d7e2c8fa0af"
+    },
+    {
+      "path": "docs/DATA.md",
+      "bytes": 6501,
+      "sha256": "5df3e9a025d341c11bc52c096294a4489d3958afd5a40dc2d8fb7429b84da81f"
+    },
+    {
+      "path": "docs/REPRODUCING.md",
+      "bytes": 6087,
+      "sha256": "bbf5efacfcdf8fa179fdc4f265d949c4cded1941c11ef0924e55e38907f34f1d"
+    },
+    {
+      "path": "model/transition_head.pt",
+      "bytes": 28313052,
+      "sha256": "379b4c75ad129927d6d8e2d06819d59804691d74e34823b22c3e80f50c9785fd"
+    },
+    {
+      "path": "report/report.html",
+      "bytes": 3338659,
+      "sha256": "4202c0b313a02ff87aa8a306b25560e1f6fc611f84d96ae36603ff3d01ba7206"
+    },
+    {
+      "path": "report/report.pdf",
+      "bytes": 2833335,
+      "sha256": "0bab5b1adab67d9e4fbe65e514791ed3823c76f9882169f1b2f07196727dc783"
+    },
+    {
+      "path": "requirements-analysis.txt",
+      "bytes": 32,
+      "sha256": "1b61274503ac338558a6f47dc4f9572cb0302addc040c10370039695c0f5064c"
+    },
+    {
+      "path": "requirements-training.txt",
+      "bytes": 43,
+      "sha256": "2fa59985d8e0a78a97a307a4a1c0ee7f5dcfdf3cc02e16c70f66e04937e6965c"
+    },
+    {
+      "path": "src/__init__.py",
+      "bytes": 73,
+      "sha256": "07bd786fabd526a574a60eafa83f7fcd3663de2d3ad43a4e63e4450236dbcde2"
+    },
+    {
+      "path": "src/analyze.py",
+      "bytes": 3423,
+      "sha256": "062c6b8a740da13dc41964f43ec3decafef9448f1d3caaa03894b24fc5a0f944"
+    },
+    {
+      "path": "src/analyze_coupling.py",
+      "bytes": 3950,
+      "sha256": "79f227d2c1d7a987c5fefdaa84e00ceee270ea939b1477a022989d3a8b63eb67"
+    },
+    {
+      "path": "src/analyze_oracle.py",
+      "bytes": 7220,
+      "sha256": "03a6b068273adf09db063ecc36f31f4bfec4d4923038a36a0a4fe6c43463e663"
+    },
+    {
+      "path": "src/analyze_plateau.py",
+      "bytes": 7549,
+      "sha256": "b0f553313cacc5d3ef4189bf02ba6a2e63817014520dca02825644ab431cc9cf"
+    },
+    {
+      "path": "src/diagnose_markov.py",
+      "bytes": 9878,
+      "sha256": "0ea91365804a210cc9022d9754a3f50dc189fb8e831b171345e67578c2036c4b"
+    },
+    {
+      "path": "src/diagnose_ratio.py",
+      "bytes": 10484,
+      "sha256": "044ef74c0faedd7bcd4d80d6345e33f9c9a18e4e785410500a618afdb28e013f"
+    },
+    {
+      "path": "src/figures.py",
+      "bytes": 1856,
+      "sha256": "e2a3a3dffea657f85135165dde1de7bd8b545c795e4bc87ceb1c8b848e8123ce"
+    },
+    {
+      "path": "src/markov.py",
+      "bytes": 3275,
+      "sha256": "52dbf9e56163c68584f4b01817f448843d0c0c40c74726f286c48192a799d169"
+    },
+    {
+      "path": "src/model.py",
+      "bytes": 8700,
+      "sha256": "cbf1628ddd04a9bfacbfda79fc21679a65750194789a452603811b802581b7e8"
+    },
+    {
+      "path": "src/plot_common.py",
+      "bytes": 2522,
+      "sha256": "04dcdf69378e869f752ec88685b1322ba2d8f057e3e9454ea8390369d133a5f6"
+    },
+    {
+      "path": "src/plot_gradients.py",
+      "bytes": 9493,
+      "sha256": "721aa47c3ae426cf380fb2a77479f31f487c54c6f648e892ed23d454050d8545"
+    },
+    {
+      "path": "src/plot_internal.py",
+      "bytes": 4917,
+      "sha256": "9114c5d2acfd8050142200e5c7d56ad60997cea372aef221462ceea9a796546e"
+    },
+    {
+      "path": "src/plot_mixture.py",
+      "bytes": 3188,
+      "sha256": "20d84a322a02d9244c3d741043b82b260b9963963d2469c7a6f22ec1ef9c59d6"
+    },
+    {
+      "path": "src/plot_seeds.py",
+      "bytes": 3425,
+      "sha256": "3afca57416d9800be50c4a58279812a1a22d62e1af141c7f270392a8b7d84774"
+    },
+    {
+      "path": "src/plot_terminal.py",
+      "bytes": 2834,
+      "sha256": "fb6d2bbc43a83b05403ffd2c4989167246f6f062315dd5a760be11f60abdd8ef"
+    },
+    {
+      "path": "src/plot_updates.py",
+      "bytes": 1701,
+      "sha256": "c63d5cd06e2358d3c6a8552027d8bb818df0a4242e493f77a598578f0a81fa79"
+    },
+    {
+      "path": "src/pretrain.py",
+      "bytes": 4169,
+      "sha256": "b38eaaed164c9af3d89660476ae77ab6e2f1250f58135b225a9f32038fd95d5e"
+    },
+    {
+      "path": "src/train.py",
+      "bytes": 17923,
+      "sha256": "6c0941fc0f9edffb886dc29f122d95c4a79709c362aa393881f6ba86e9313d86"
+    },
+    {
+      "path": "src/verify.py",
+      "bytes": 4185,
+      "sha256": "728986c66363639b4459a385111b843fd9b63cec79ee4364c898937bce5379c2"
+    },
+    {
+      "path": "tests/test_markov.py",
+      "bytes": 4957,
+      "sha256": "ebb75fb6e58e3e80840efe6226fd54c50e7b547ecfab115f42b6b111db048e15"
+    },
+    {
+      "path": "tests/test_model.py",
+      "bytes": 3882,
+      "sha256": "0d76eff3d31f393e0ad87c7f86945e4be96f67af3211feb8162e6096f864575f"
+    }
+  ]
+}
